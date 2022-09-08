@@ -16,7 +16,7 @@ function NavPage(props) {
           className="btn btn-primary m-2"
           onClick={() => props.setPage(props.page + 1)}
         >
-          Next{props.page + 1}
+          Next{props.page}
         </button>
       </div>
     </header>

@@ -7,16 +7,16 @@ function NavPage(props) {
       <p>Page: {props.page}</p>
       <div className="d-grid gap-2 d-md-block">
         <button
-          className="btn btn-primary "
+          className="btn btn-primary btn-sm "
           onClick={() => props.setPage(props.page - 1)}
         >
-          Prev{props.page - 1}
+          Prev{props.page}
         </button>
         <button
-          className="btn btn-primary m-2"
+          className="btn btn-primary btn-sm"
           onClick={() => props.setPage(props.page + 1)}
         >
-          Next{props.page + 1}
+          Next{props.page}
         </button>
       </div>
     </header>

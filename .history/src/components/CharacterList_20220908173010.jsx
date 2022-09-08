@@ -5,20 +5,18 @@ function NavPage(props) {
   return (
     <header className="d-flex justify-content-between align-items-center">
       <p>Page: {props.page}</p>
-      <div className="d-grid gap-2 d-md-block">
-        <button
-          className="btn btn-primary "
-          onClick={() => props.setPage(props.page - 1)}
-        >
-          Prev{props.page - 1}
-        </button>
-        <button
-          className="btn btn-primary m-2"
-          onClick={() => props.setPage(props.page + 1)}
-        >
-          Next{props.page + 1}
-        </button>
-      </div>
+      <button
+        className="btn btn-primary btn-sm"
+        onClick={() => props.setPage(props.page + 1)}
+      >
+        Page{props.page}
+      </button>
+      <button
+        className="btn btn-primary btn-sm"
+        onClick={() => props.setPage(props.page - 1)}
+      >
+        Prev{props.page}
+      </button>
     </header>
   );
 }
