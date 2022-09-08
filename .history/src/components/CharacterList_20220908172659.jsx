@@ -9,7 +9,7 @@ function NavPage(props) {
         className="btn btn-primary btn-sm"
         onClick={() => props.setPage(props.page + 1)}
       >
-        Page{props.page}
+       Page{props.page}
       </button>
     </header>
   );
@@ -49,8 +49,6 @@ function CharacterList() {
           })}
         </div>
       )}
-
-      <NavPage page={page} setPage={setPage} />
     </div>
   );
 }

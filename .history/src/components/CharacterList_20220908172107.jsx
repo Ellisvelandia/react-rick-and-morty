@@ -7,9 +7,9 @@ function NavPage(props) {
       <p>Page: {props.page}</p>
       <button
         className="btn btn-primary btn-sm"
-        onClick={() => props.setPage(props.page + 1)}
+        onClick={() => console.setPage(2)}
       >
-        Page{props.page}
+        Page 2
       </button>
     </header>
   );
@@ -30,7 +30,7 @@ function CharacterList() {
       setCharacters(data.results);
     }
     fectData();
-  }, [page]);
+  }, []);
 
   return (
     <div className="container">
@@ -49,8 +49,6 @@ function CharacterList() {
           })}
         </div>
       )}
-
-      <NavPage page={page} setPage={setPage} />
     </div>
   );
 }

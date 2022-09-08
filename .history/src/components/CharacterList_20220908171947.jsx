@@ -7,9 +7,9 @@ function NavPage(props) {
       <p>Page: {props.page}</p>
       <button
         className="btn btn-primary btn-sm"
-        onClick={() => props.setPage(props.page + 1)}
+        onClick={() => console.log("click")}
       >
-        Page{props.page}
+        Page 2
       </button>
     </header>
   );
@@ -22,19 +22,17 @@ function CharacterList() {
 
   useEffect(() => {
     async function fectData() {
-      const response = await fetch(
-        `https://rickandmortyapi.com/api/character?page=${page}`
-      );
+      const response = await fetch(`https://rickandmortyapi.com/api/character?page=${page}`);
       const data = await response.json();
       setLoading(false);
       setCharacters(data.results);
     }
     fectData();
-  }, [page]);
+  }, []);
 
   return (
     <div className="container">
-      <NavPage page={page} setPage={setPage} />
+      <NavPage page={page} setPage={}/>
 
       {loading ? (
         <h2>Loading...</h2>
@@ -49,8 +47,6 @@ function CharacterList() {
           })}
         </div>
       )}
-
-      <NavPage page={page} setPage={setPage} />
     </div>
   );
 }
