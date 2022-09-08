@@ -16,7 +16,7 @@ function CharacterList() {
   return (
     <div>
       {characters.map((character) => {
-        return <Character key={character.id} character={character} />;
+        return <Character key={c} character={character} />;
       })}
     </div>
   );
