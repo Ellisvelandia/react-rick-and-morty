@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import CharacterList from "./components/CharacterList";
+import Character from "./components/Character";
 
-function CharacterList() {
+function App() {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
@@ -14,16 +16,12 @@ function CharacterList() {
 
   return (
     <div>
-      {characters.map((character) => {
-        return (
-          <div key={character.id}>
-            <h2>{character.name}</h2>
-            <img src={character.image} alt={character.name} />
-          </div>
-        );
-      })}
+      <h1>Rick and morty</h1>
+      <CharacterList/>
+      <Character/>
+    
     </div>
   );
 }
 
-export default CharacterList;
+export default App;
