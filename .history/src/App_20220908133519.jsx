@@ -3,7 +3,7 @@ import React, {useEffect} from 'react'
 function App() {
 
   useEffect(() => {
-  console.log("charge")
+  console.log()
   }, [])
 
   return (
@@ -12,5 +12,3 @@ function App() {
 }
 
 export default App
-
- 
