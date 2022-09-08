@@ -18,7 +18,7 @@ function App() {
     <div>
       <h1>Rick and morty</h1>
       <CharacterList/>
-      <Character/>
+      <CharacterList/>
       {characters.map((character) => {
         return (
           <div key={character.id}>

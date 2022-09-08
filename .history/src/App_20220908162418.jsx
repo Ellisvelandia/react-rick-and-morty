@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import CharacterList from "./components/CharacterList";
-import Character from "./components/Character";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -17,8 +15,6 @@ function App() {
   return (
     <div>
       <h1>Rick and morty</h1>
-      <CharacterList/>
-      <Character/>
       {characters.map((character) => {
         return (
           <div key={character.id}>
