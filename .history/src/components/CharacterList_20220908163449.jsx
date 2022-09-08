@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Character from "./components/Character";
 
+
 function CharacterList() {
   const [characters, setCharacters] = useState([]);
 
@@ -16,7 +17,10 @@ function CharacterList() {
   return (
     <div>
       {characters.map((character) => {
-        return <Character character={character} />;
+        return (
+      <Character />
+         
+        );
       })}
     </div>
   );

@@ -1,8 +1,8 @@
 import React from "react";
 
-function Character({ character }) {
+function Character(props) {
   return (
-    <div key={character.id}>
+    <div key={props.character.id}>
       <h2>{character.name}</h2>
       <img src={character.image} alt={character.name} />
     </div>

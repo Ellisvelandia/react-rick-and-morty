@@ -1,6 +1,6 @@
 import React from "react";
 
-function Character({ character }) {
+function Character(props) {
   return (
     <div key={character.id}>
       <h2>{character.name}</h2>
