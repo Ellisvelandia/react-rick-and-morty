@@ -15,21 +15,21 @@ function CharacterList() {
     fectData();
   }, []);
 
+  if (loading) {
+    return <div>Loading</div>;
+  }
+
   return (
     <div className="container bg-danger ">
-      {loading ? (
-        <h2>Loading...</h2>
-      ) : (
-        <div className="row">
-          {characters.map((character) => {
-            return (
-              <div className="col-md-4" key={character.id}>
-                <Character character={character} />
-              </div>
-            );
-          })}
-        </div>
-      )}
+      <div className="row">
+        {characters.map((character) => {
+          return (
+            <div className="col-md-4" key={character.id}>
+              <Character character={character} />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
